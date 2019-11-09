@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--  19FA-SWDV-131-001-Web Styling
+ 
+		 Author: Kait Low
+		 Date: April 18, 2019
+
+		 LAST MODIFIED: 10/24/2019
+ 
+		 Filename: about.html
+		 
+ Notes: Bio page. Used jQuery to highlight h2 and h1 tags in green when hovered over.
+-->
+<html lang="en">
+<head>
+	  <meta charset= "utf-8">
+	  <meta name= "description" content="Kaitelyn Low Portfolio">
+	  <meta name= "keywords" content="portfolio,Kaitelyn Low, Work experience">
+	  <meta name= "author" content="Kaitelyn Low">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="https://fonts.googleapis.com/css?family=Griffy" rel="stylesheet">
+	  <title>Kaitelyn Low Portfolio</title>
+	  <link rel="stylesheet" href="css/portfoliocss.css"> 
+	  <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Amaranth|Amatic+SC" rel="stylesheet">
+	  <link rel="shortcut icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+      <link rel="icon" href="images/favicon-32x32.png" sizes="16x16 32x32" type="image/png"> 
+	  <script src="js/clock.js" defer></script>
+	  
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script>
+		$(document).ready(function(){
+		$("h1").on({
+		mouseenter: function(){
+		$(this).css("color", "#056C58");
+		},
+		mouseleave: function(){
+		$(this).css("color", "black");
+		}
+		});
+		$("h2").on({
+		mouseenter: function(){
+		$(this).css("color", "#056C58");
+		},
+		mouseleave: function(){
+		$(this).css("color", "black");
+		}
+		});
+	});
+	  </script>
+	  
+</head>
+<body>
+	  <header> 
+	   <a href="index.html"><img class="profile" src="images/kaitEdited.png" alt="Kaitelyn Low"></a>
+	   <h1>Kaitelyn Low</h1>
+	   <!-- I don't need this anymore.
+	   <div id="dateNow">11/3/2017  2:45:12 p.m.</div> -->
+	   
+	  </header>
+	  
+	<nav><a id="navicon" href="#"><img src="images/navicon.png" alt="" /></a>
+	  <ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="about.html">Bio</a></li>
+	  <li><a href="workexperience.html">Experience</a></li>  
+	  <li><a href="contactme.html">Contact</a></li>
+	  </ul>
+	  </nav> 
+	  
+	  <article>
+	  <h2>Why Software Development?</h2>
+	  <div>
+	  <p>Growing up, I was one of those kids who didn’t want to become an adult.  
+	  Therefore, when high school graduation came knocking, 
+	  I had to very quickly come to a decision about my future career.  
+	  I settled on software development because of my interest in learning game development. 
+	  Since gaming is one of my hobbies, I thought it would be amazing if I could combine something I love, 
+	  with something practical that I can fall back on. However, after learning more about software development,
+	  it was far more interesting than I thought it would be, and have learned many things.
+	  Now, I can confidently say, I have no regrets.</p><br>
+	  </div>
+	  <h2>Personal Life</h2>
+
+	  <div>
+	  <p>I was born in a small town in Northern California called Greenwood, 
+	  and moved to Idaho when I was almost two years old.  
+	  I am the youngest of five, with a sister and three brothers.  
+	  Since my older brothers were the catalyst for my love of gaming,
+	  it is something I enjoy doing with them.</p><br>
+	  </div>
+	  <h2>Interests</h2>
+	  <div>
+	  <p>Being true to my half Japanese and half Chinese heritage, aside from playing video games, 
+	  I also enjoy listening to music, watching anime, 
+	  and consuming other various types of mostly Asian entertainment. 
+	   I am also learning Japanese and how to play the guitar as well.</p>
+	  </div>
+	  </article>  
+	  <footer>
+	  
+	  <p>Phone: <a href="tel:+02086003926">(208)600-3926</a><br>
+	  Email: <a href="mailto:kaitlow@mycwi.cc">kaitlow@mycwi.cc</a></p>
+	  <a href="https://www.linkedin.com/" target="_blank"><img src="images/iconmonstr-linkedin-3-48.png" alt="social icon for linkedin"></a>
+	  <a href="https://github.com/" target="_blank"><img src="images/iconmonstr-github-1-48.png" alt="social icon for github"></a>
+	  </footer>
+</body>
+</html>

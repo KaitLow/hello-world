@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'bubbler_oneregular';
+    src: url('bubblerone-regular-webfont.eot');
+    src: url('bubblerone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bubblerone-regular-webfont.woff2') format('woff2'),
+         url('bubblerone-regular-webfont.woff') format('woff'),
+         url('bubblerone-regular-webfont.ttf') format('truetype'),
+         url('bubblerone-regular-webfont.svg#bubbler_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+

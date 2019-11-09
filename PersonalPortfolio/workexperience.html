@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<!--  19FA-SWDV-131-001-Web Styling
+ 
+		 Author: Kait Low
+		 Date: April 18, 2019
+
+		 LAST MODIFIED: 10/24/2019
+ 
+		 Filename: contactme.html
+		 
+ Notes: The contact form for my website. 
+		Used jquery to show the textarea of the form after a button is clicked, 
+	    and to highlight h1 tags in green when hovered over. Used jQuery to add an automatic carousel 
+		that changes ever 3 seconds. It was the worse to adjust to different views. 
+-->
+<html lang="en">
+<head>
+	<meta charset= "utf-8">
+	<meta name= "description" content="Kaitelyn Low Portfolio">
+	<meta name= "keywords" content="portfolio,Kaitelyn Low, Work experience">
+	<meta name= "author" content="Kaitelyn Low">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Griffy" rel="stylesheet">
+	<title>Kaitelyn Low Portfolio</title>
+	<link rel="stylesheet" href="css/portfoliocss.css"> 
+	<link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amaranth|Amatic+SC" rel="stylesheet">
+	<link rel="shortcut icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="images/favicon-32x32.png" sizes="16x16 32x32" type="image/png"> 
+	<script src="js/clock.js" defer></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("td").on({
+		mouseenter: function(){
+		$(this).css("background-color", "#056C58");
+		$(this).css("color", "white");
+		},
+		mouseleave: function(){
+		$(this).css("background-color", "white");
+		$(this).css("color", "black");
+		}
+		});
+		$("h1").on({
+		mouseenter: function(){
+		$(this).css("color", "#056C58");
+		},
+		mouseleave: function(){
+		$(this).css("color", "black");
+		}
+		});
+		$("h2").on({
+		mouseenter: function(){
+		$(this).css("color", "#056C58");
+		},
+		mouseleave: function(){
+		$(this).css("color", "black");
+		}
+		});
+	});
+</script>
+</head>
+<body>
+
+	  <header> 
+	   <a href="index.html"><img class="profile" src="images/kaitEdited.png" alt="Kaitelyn Low"></a>
+	   <h1>Kaitelyn Low</h1>
+	   <!-- I don't need this anymore.
+	   <div id="dateNow">11/3/2017  2:45:12 p.m.</div> -->
+	   
+	  </header>
+	  
+	  <nav><a id="navicon" href="#"><img src="images/navicon.png" alt="" /></a> 
+	  <ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="about.html">Bio</a></li>
+	  <li><a href="workexperience.html">Experience</a></li>  
+	  <li><a href="contactme.html">Contact</a></li>
+	  </ul>
+	  </nav> 
+	  
+	  <article>
+	  <h2>Education</h2>
+	  <div id="WE">
+	  <p>Home-school (GED) | Graduated Year: 2017<br>College of Western Idaho<br>
+	  Software Development, Associate of Applied Science | Graduating Year: 2021</p><br>
+	  </div>
+	  <h2>Work Experience</h2>
+	  
+	  <table>
+		  <thead>
+		  <tr>
+			<th>Job Assignment</td>
+			<th>Experience</td>
+		  </tr>
+		  </thead>
+		  <tbody>
+		  <tr>
+			<td>Assistant Learn To Skate Instructor</td>
+			<td>400+ Hours</td>
+		  </tr>
+		  <tr>
+			<td>Learn To Skate Instructor</td>
+			<td>3+ Years</td>
+		  </tr>
+		  <tr>
+			<td>Clothing Retail</td>
+			<td>3 months</td>
+		  </tr>
+		  <tr>
+			<td>Programming Experience</td> 
+			<td>Rising Sun Translations</a></td>
+		</tr>
+		  <tfoot>
+		  </tfoot>
+		  <tbody>
+	  </table>
+<!-- Carousel -->  
+<!-- This thing has been the bane of my existence -->
+<h2>Rising Sun Translations</h2>
+<div class="slideshow-container">
+		<div class="mySlides fade">
+		  <img id="slide" src="images/RSindex.PNG" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+		  <img id="slide" src="images/RSMList.PNG" style="width:100%">
+		</div>
+
+		<div class="mySlides fade">
+		  <img id="slide" src="images/RSKH.PNG" style="width:100%">
+		</div>
+		
+		<div class="mySlides fade">
+		  <img id="slide" src="images/RSContact.PNG" style="width:100%">
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span> 
+</div>
+<br>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
+}
+</script>
+</article>	  
+	  <footer>
+	  
+	  <p>Phone: <a href="tel:+02086003926">(208)600-3926</a><br>
+	  Email: <a href="mailto:kaitlow@mycwi.cc">kaitlow@mycwi.cc</a></p>
+	  <a href="https://www.linkedin.com/" target="_blank"><img src="images/iconmonstr-linkedin-3-48.png" alt="social icon for linkedin"></a>
+	  <a href="https://github.com/" target="_blank"><img src="images/iconmonstr-github-1-48.png" alt="social icon for github"></a>
+	  </footer>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<!--  19FA-SWDV-131-001-Web Styling
+ 
+		 Author: Kait Low
+		 Date: April 18, 2019
+
+		 LAST MODIFIED: 10/24/2019
+ 
+		 Filename: contactme.html
+		 
+ Notes: The contact form for my website. 
+		Used jquery to show the textarea of the form after a button is clicked, 
+	    and to highlight h1 tags in green when hovered over. 
+-->
+<html lang="en">
+<head>
+      <meta charset= "utf-8">
+	  <meta name= "description" content="Kaitelyn Low Portfolio">
+	  <meta name= "keywords" content="portfolio,Kaitelyn Low, contact me">
+	  <meta name= "author" content="Kaitelyn Low">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="https://fonts.googleapis.com/css?family=Griffy" rel="stylesheet">
+	  <title>Kaitelyn Low Portfolio</title>
+	  <link rel="stylesheet" href="css/portfoliocss.css"> 
+	  <link href="https://fonts.googleapis.com/css?family=Merienda+One" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Amaranth|Amatic+SC" rel="stylesheet">
+	  <link rel="shortcut icon" href="images/favicon-16x16.png" sizes="16x16" type="image/png">
+      <link rel="icon" href="images/favicon-32x32.png" sizes="16x16 32x32" type="image/png"> 
+	  <script src="js/clock.js" defer></script>
+
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script>
+		$(document).ready(function(){
+			$("button").click(function(){
+				$("textarea").toggle();
+			});
+			$("h1").on({
+			mouseenter: function(){
+			$(this).css("color", "#056C58");
+			},
+			mouseleave: function(){
+			$(this).css("color", "black");
+			}
+			});
+		});
+	  </script>
+</head>
+<body>
+	  <header> 
+	   <a href="index.html"><img class="profile" src="images/kaitEdited.png" alt="Kaitelyn Low"></a>
+	   <h1>Kaitelyn Low</h1>
+	   <!--  I don't need this anymore. 
+	   <div id="dateNow">11/3/2017  2:45:12 p.m.</div>  -->
+	   
+	  </header>
+	  
+	<nav><a id="navicon" href="#"><img src="images/navicon.png" alt="" /></a>
+	  <ul>
+	  <li><a href="index.html">Home</a></li>
+	  <li><a href="about.html">Bio</a></li>
+	  <li><a href="workexperience.html">Experience</a></li>  
+	  <li><a href="contactme.html">Contact</a></li>
+	  </ul>
+	  </nav>  
+	  
+    <form action="mailto:kaitlow@mycwi.cc?subject=Personal%20Portfolio%20Mail" 
+	enctype="text/plain" method="POST">
+	<fieldset>
+	<legend>Contact Form</legend>
+		<br>
+		<p>Employer or peer? <br />
+		<select name="costomer_type">
+		<option>Employer</option>
+		<option>Peer</option>
+		</select></p>
+		
+		<label for="company">First Name:</label>
+		<input type="text" name="first_Name" size="20" id="firstName" required><br>
+			<br>
+		<label for="contact">Last Name:</label>
+		<input type="text" name="last_Name" size="20" id="lastName" required><br>
+			<br>
+		<label for="contact"> Email:</label>
+		<input type="text" name="email" size="20" id="email" required>
+			<br><br>
+		<button><label for="comments">Enter your comments:</label></button>
+		<br />			
+		<textarea cols="80" rows="10" name="comment"></textarea>
+		<br>
+		<label for="priority">Want priority response?</label>
+		<input type="checkbox" name="priority" value="yes">	
+			
+			
+		<div id="buttons">
+		<input type="submit" id="submit" value="Submit" class="btn">	
+		<input type="reset" id="submit" value="Reset" class="btn">
+		</div>
+		</fieldset>
+		
+     </form>
+ </article>
+	 <footer>
+	 
+	 <p>Phone: <a href="tel:+02086003926">(208)600-3926</a><br>
+	  Email: <a href="mailto:kaitlow@mycwi.cc">kaitlow@mycwi.cc</a></p>
+<a href="https://www.linkedin.com/" target="_blank"><img src="images/iconmonstr-linkedin-3-48.png" alt="social icon for linkedin"></a>
+	  <a href="https://github.com/" target="_blank"><img src="images/iconmonstr-github-1-48.png" alt="social icon for github"></a>
+	 </footer>
+  </body>
+</html>

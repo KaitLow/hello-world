@@ -1,0 +1,518 @@
+
+/* 19FA-SWDV-131-001-Web Styling
+ 
+		 Author: Kait Low
+		 Date: April 18, 2019
+
+		 LAST MODIFIED: 10/24/2019
+ 
+		 Filename: portfoliocss.css
+		 
+ Notes: Holds all css styling excluding jQuery styling. I have the @font-face stuff imported, but not using them.
+        
+ */
+
+@font-face {
+    font-family: 'devroyeregular';
+    src: url('../fonts/DEVROYE_-webfont.eot');
+    src: url('../fonts/DEVROYE_-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DEVROYE_-webfont.woff2') format('woff2'),
+         url('../fonts/DEVROYE_-webfont.woff') format('woff'),
+         url('../fonts/DEVROYE_-webfont.ttf') format('truetype'),
+         url('../fonts/DEVROYE_-webfont.svg#devroyeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'bubbler_oneregular';
+    src: url('../fonts/bubblerone-regular-webfont.eot');
+    src: url('../fonts/bubblerone-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/bubblerone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/bubblerone-regular-webfont.woff') format('woff'),
+         url('../fonts/bubblerone-regular-webfont.ttf') format('truetype'),
+         url('../fonts/bubblerone-regular-webfont.svg#bubbler_oneregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/***************************************************/
+/**               HTML Styles                     **/
+/***************************************************/
+html{
+	background-color: #056C58; /*Green Color*/
+}
+/***************************************************/
+/**               Body Styles                     **/
+/***************************************************/
+body {
+  background-color: #CDCDCD;  /*Gray Color*/
+  margin: 0 10%;
+  font-family: sans-serif;
+  color: black;
+  }
+h2 {
+  font-family: /*'devroyeregular'*/Garamond, sans-serif, serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 2em;
+  text-shadow: 2px 1px white;
+}
+
+article div{
+	text-align: center;
+	font-size: 1.1em;
+
+    margin-left: 10px;
+	margin-right: 10px;
+}
+/***************************************************/
+/**             Header Styles                     **/
+/***************************************************/
+header{
+	display: block;
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.profile{    /*My awkward face*/
+	border-radius: 50%;
+	width: 100%;
+	padding-left: 38%;
+	padding-right: 38%;
+}
+
+h1 {
+  font-family: Garamond, Verdana, cursive;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 3em;
+  text-shadow: 4px 2px white;	
+  border: 2px dashed #804260; /*Purple Color*/
+  border-left: none;
+  border-right: none;
+  letter-spacing: 0.1em;
+  transition: color 0.5s ease-in 0.5s,
+		        font-size 1s ease,
+				letter-spacing 1s ease-out,
+				text-shadow 1s cubic-bezier(0.6, 0, 0.8, 0.5);
+}
+/*#dateNow{      /*This was used when I had a javascript clock
+	font-size: .5em;
+	text-align: center;
+	padding-right: 2%;
+	
+}*/
+/***************************************************/
+/**                Nav Styles                     **/
+/***************************************************/
+nav{
+	display: block;
+	text-align: center;
+	background-color: #804260; /*Purple Color*/
+	padding: 1px;
+	width: 100%;
+	font-family: /*'bubbler_oneregular'*/Garamond, Candara, sans-serif, serif;
+	border-radius: 50px;
+	
+}
+nav ul li{
+	display: inline;
+	align-content: space-around;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+nav ul li a{
+	color: white;
+	text-shadow: rgba(0, 0, 0, 1);
+	transition: color 0.5s ease-in 0.5s,
+		        font-size 1s ease,
+				letter-spacing 1s ease-out,
+				text-shadow 1s cubic-bezier(0.6, 0, 0.8, 0.5);	
+}
+nav ul li a:hover { 
+	color: black;
+	font-size: 1.8em;
+	letter-spacing: 0.1em;
+	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px;
+}
+a#navicon{
+	display: none;  /*Only seen in mobile view*/
+}
+/***************************************************/
+/**              Footer styles                    **/
+/***************************************************/
+footer{
+	display: block;
+	font-size: .75em;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-image: linear-gradient(to bottom, #CDCDCD, #804260); /*Gray to Purple*/
+}
+footer p {
+	font-size: 1.5em;
+}
+/***************************************************/
+/**               Form Styles                     **/
+/***************************************************/
+form{
+	width: 90%;
+	align-content: center;
+	padding-left: 25%;
+	padding-right: 20%;
+	padding-bottom: 5%;
+	text-align: center;
+	}
+legend{
+	font-size: 2em;
+	color: #056C58; /*Green Color*/
+}
+label, p{
+	font-size: 1.2em;
+}
+textarea{
+	display: none;
+	width: 99%%;
+	font-size: 1.2em;
+}
+div#buttons{
+	text-align: center;
+	width: 90%;
+	padding-top: 10px;
+	padding-bottom: 5px;
+	padding-right: 5px;
+	
+}
+.btn{
+	width: 60px;
+	height: 30px;
+}
+.btn:hover{
+	border: 2px solid #804260;
+}
+fieldset {
+	display: block;
+	margin-right: 50%;
+}
+article {
+	display: block;
+	font-size: 1.1em;
+	padding: 20px;
+	margin-right: 30px;
+	margin-left: 30px;
+	font-family: Verdana;
+}
+/***************************************************/
+/**                 Table Styles                  **/
+/***************************************************/
+table {
+	width: 70%;
+	margin: auto auto;
+	background-color: white;
+	border: 1px solid black;
+	color: black;
+	margin-bottom: 10%;
+	font-size: 1.2em;
+}
+thead{
+	text-align: center;
+	font-weight: bolder;
+	background-color: white;
+	color: #804260;          /*Purple Color*/
+}
+thead th{
+	border: solid black 2px;
+}
+td:hover{
+	font-size: 1.1em;
+	letter-spacing: 0.1em;
+	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px;
+}
+td{
+	border: solid black 1px;
+}
+
+/*tbody td:hover{                         Used jQuery instead
+	background-color: paleturquoise;
+}*/
+span{
+	text-decoration: underline;
+}
+div {
+	text-align: justify;
+	text-indent: 25px;
+}
+
+/***************************************************/
+/**                 Carousel Styles               **/
+/***************************************************/
+
+* {
+	box-sizing: border-box;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 850px;
+  height: 600px;
+  padding-left: 18%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+/************************************************************************************************************/
+/*============================================================*/
+/*                   Mobile Styles Below                      */    /*This looks dumb...I know.
+/*============================================================*/
+/*************************************************************************************************************/
+/***************************************************/
+/*              Mobile View                        */
+/***************************************************/
+@media only screen and (max-width: 480px){
+	
+		
+		a#navicon{
+			display: block;
+			background-color: #804260;  /*Purple Color*/		
+			width: 100%;
+			margin-right: 10px;
+			float: left;
+		}
+		nav ul{
+			display: none;
+			text-align: center;
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+		nav ul li{
+			display: block;
+			font-size: 1.8em;
+		}
+		a#navicon:hover+ul, nav ul:hover{
+			display: block;
+			color: white;	
+		}
+/*************Header Styles****************/
+		h1{
+			font-size: 2.5em;
+			display: block;
+			float: center;
+			padding-bottom: 0px;
+		}
+		.profile{ 
+			width: 100%;
+			padding-left: 27.5%;
+			padding-right: 27.5%;
+		}
+/*************Body Styles******************/
+		h2{
+			font-size: 1.8em;
+			padding-top: 20px;
+		}
+		article{
+			display: block;
+			margin-top: 10%;
+			text-align: left;
+			margin-left: 0px;
+			margin-right: 0px;
+			font-size: 1em;
+		}
+		div#WE{
+			text-align: center;
+			font-size: 1em;
+		}
+/************ Form Styles *******************/	
+		
+		form{
+			width: 490px;
+			padding-top: 80px;
+			padding-left: 18%;
+			padding-right: 5px;
+			text-align: center;
+			font-size: 1em;
+		}
+		legend{
+			font-size: 1.5em;
+		}
+		textarea{
+			width: 200px;
+		}
+		.btn{
+			width: 70px;
+			height: 30px;
+		}
+		div#buttons{
+		text-align: center;
+		width: 100%;
+		padding-left: 5px;
+		}
+/*************** Carousel Styles *******************/
+		 .slideshow-container {	
+			display: block;
+			width: 350px;
+			height: 100%;
+			margin-left: 0px;
+			padding-left: 0;
+			padding-right: 34%;
+		}
+		.slideshow-container:hover{  /*Makes the carousel bigger when overed over in mobile view*/
+			ms-transform: scale(1.5); /* IE 9 */
+		    -webkit-transform: scale(1.5); /* Safari 3-8 */
+		    transform: scale(1.5); 
+		}
+	/*     Table Styles   */
+	td:hover{
+	font-size: 1.1em;
+	text-shadow: rgba(0, 0, 0, 0.5) 15px -3px 8px;
+	}
+}
+/***************************************************/
+/*               Tablet View                       */
+/***************************************************/
+@media only screen and (min-width: 481px){
+	
+	/* Nav Styles */
+	nav{
+		padding-top: 2px;
+	}
+	nav ul{
+		text-align: center;
+		padding-left: 2px;
+		padding-right: 2px;
+		
+	}
+	nav ul li{
+		font-size: 1.5em;
+	}
+	   
+   /* Header Styles */
+   h1{
+	   padding-bottom: 2px;
+   }
+   /* Body Styles */
+   article div{
+	   font-size: 1em;
+   }
+   /* Form Styles */
+   		form{
+			width: 1000px;
+			padding-top: 15px;
+			padding-left: 12%;
+			padding-right: 5px;
+			text-align: center;
+			font-size: 1em;
+		}
+		legend{
+			font-size: 1.5em;
+		}
+		textarea{
+			width: 490px;
+		}
+		.btn{
+			width: 70px;
+			height: 30px;
+		}
+		div#buttons{
+		text-align: center;
+		width: 100%;
+		padding-left: 5px;
+		}
+	/* Carousel Styles */
+	 .slideshow-container {	
+			display: block;
+			width: 500px;
+			height: 100%;
+			margin-left: 0px;
+			padding-right: 22%;
+		}
+}
+/***************************************************/
+/*                Desktop View                     */
+/***************************************************/
+@media only screen and (min-width: 769px){
+	form{
+	width: 1500px;
+	align-content: center;
+	padding-left: 32%;
+	padding-right: 20%;
+	padding-bottom: 5%;
+	text-align: center;
+	}
+	legend{
+		font-size: 2em;
+		color: #056C58;
+	}
+	label, p{
+		font-size: 1.2em;
+	}
+	textarea{
+		display: none;
+		width: 99%%;
+	}
+	div#buttons{
+		text-align: center;
+		width: 90%;
+		padding-top: 10px;
+		padding-bottom: 5px;
+		padding-right: 5px;
+	}
+	.btn{
+		width: 60px;
+		height: 30px;
+	}
+	fieldset {
+		display: block;
+		margin-right: 50%;
+	}
+	article {
+		display: block;
+		font-size: 1.1em;
+		padding: 20px;
+		margin-right: 30px;
+		margin-left: 30px;
+		font-family: Verdana;
+	}
+ .slideshow-container {	
+			display: block;
+			width: 5000px;
+			height: 100%;
+			margin-left: 0px;
+			padding-right: 1%;
+		}
+
+}
